@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가운데 문자 출력</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer, center;
+            center = Math.floor(str.length / 2);
+
+            if(str.length % 2 == 0) {
+                answer = str.substr(center-1, 2)
+            } else {
+                answer = str.substr(center, 1)
+            }
+
+            // if(str.length % 2 == 0) {
+            //     answer = str.substring(center-1, center+1)
+            // } else {
+            //     answer = str.substring(center, center + 1)
+            // }
+            
+            return answer;
+        }
+
+        let str = 'study';
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>

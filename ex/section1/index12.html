@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중복단어제거</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            // let answer = [...new Set(str)];
+            let answer;
+
+            answer = str.filter((x,y) => {
+                return str.indexOf(x) === y
+            })
+            
+            return answer;
+        }
+
+        let str = ['good','time','good','time','student'];
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>

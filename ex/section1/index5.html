@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대문자 찾기</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer = 0;
+
+            for(let x of str) {
+                if(x.toUpperCase() === x) answer++
+            }
+
+            // for(let x of str) {
+            //     let num = x.charCodeAt();
+            //     if(num >= 65 && num <= 90) answer++
+            // }
+
+            // let upper = [];
+            // let split = str.split('');
+            // for(let i = 65; i <= 90; i++) {
+            //     upper.push(String.fromCharCode(i));
+            // }
+
+            // answer = upper.filter(x => split.includes(x)).length;
+
+            return answer;
+        }
+
+        let str = 'KoreaTimeGood';
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
