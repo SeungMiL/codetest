@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회문 문자열</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = 'YES';
+            arr = arr.toLowerCase();
+            if(arr !== arr.split('').reverse().join('')) return 'NO'
+
+
+            return answer;
+            }
+
+            arr = 'gooG';
+            console.log(solution(arr));
+    </script>
+</body>
+</html>

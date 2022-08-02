@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자만 추출</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = 0;
+            arr = arr.replace(/[^0-9]/g, '');
+
+            answer = +arr
+
+            return answer;
+            }
+
+            arr = 'g0en2T0s8eSoft';
+            console.log(solution(arr));
+    </script>
+</body>
+</html>
