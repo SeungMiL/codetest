@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학급 회장(해쉬)</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer;
+            let sH = new Map();
+
+            for(let x of arr) {
+                if(sH.has(x)) sH.set(x, sH.get(x) + 1);
+                else sH.set(x, 1);
+            }
+            let max = Number.MIN_SAFE_INTEGER;
+
+            for(let [key, value] of sH) {
+                if(value > max) {
+                    max = value;
+                    answer = key;
+                }
+            }
+
+
+            return answer;
+            }
+
+            let str="BACBACCACCBDEDE";
+            console.log(solution(str));
+    </script>
+</body>
+</html>
